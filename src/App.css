@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@600&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.App {
+    position: relative;
+    z-index: -10;
+}
+
+.separated {
+    /*padding-top: 80px;*/
+    /*padding-bottom: 80px;*/
+    position: relative;
+}
+
+.separated:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 1px;
+    background: #fff;
+    opacity: 0.1;
+}
+
+ul.list__expert {
+    list-style: disc;
+    color: darkgrey;
+    text-align: inherit;
+    line-height: 40px;
+    padding-left: 40px;
+}
+
+.cert__item {
+    margin: 20px;
+}

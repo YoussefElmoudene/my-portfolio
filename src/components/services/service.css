@@ -1,0 +1,16 @@
+.service__list {
+    padding: 10px;
+}
+
+.custom__title {
+    font-family: 'Changa', sans-serif;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+.item__desc {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 45px;
+    font-family: sans-serif;
+}

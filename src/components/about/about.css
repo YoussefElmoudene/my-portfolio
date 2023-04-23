@@ -1,0 +1,21 @@
+.banner__start {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.animate__bounce {
+    animation: bounce 10s infinite;
+}
+
+.text__desc {
+    line-height: 45px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+
+.name {
+    font-family: 'Sigmar', cursive;
+    letter-spacing: 2px;
+}

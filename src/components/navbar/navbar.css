@@ -1,0 +1,31 @@
+li {
+    font-family: 'themify', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.img__logo {
+    width: 6rem;
+    height: 6rem;
+}
+
+.name {
+    font-family: 'Bruno Ace SC', cursive;
+    font-weight: bold;
+}
+
+
+
+/*.logo__container::after {*/
+/*    content: "";*/
+/*    width: 310px;*/
+/*    height: 310px;*/
+/*    position: absolute;*/
+/*    top: -180px;*/
+/*    left: -50px;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    z-index: -1;*/
+/*    border-radius: 0 0 50% 50%;*/
+/*    background: #2fbf71;*/
+/*}*/
