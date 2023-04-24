@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faIdBadge, faListAlt} from '@fortawesome/free-regular-svg-icons'
 import './navbar.css'
@@ -6,6 +6,18 @@ import {faBriefcase, faCertificate, faPhoneSquare} from "@fortawesome/free-solid
 import {Link} from "react-router-dom";
 
 function Navbar() {
+    const [activeElement, setActiveElement] = useState(
+        localStorage.getItem("activeElement") || "/"
+    );
+
+    useEffect(() => {
+        localStorage.setItem("activeElement", activeElement);
+    }, [activeElement]);
+
+    // handle click on navbar element
+    const handleClick = (element) => {
+        setActiveElement(element);
+    };
 
     const [state, setState] = useState(false)
 
@@ -66,7 +78,9 @@ function Navbar() {
                         {
                             navigation.map((item, idx) => {
                                 return (
-                                    <li key={idx} className="text-gray-200 hover:text-indigo-600">
+                                    <li key={idx}
+                                        onClick={() => handleClick(item.path)}
+                                        className={activeElement === item.path ? "text-indigo-600" : "text-gray-200 hover:text-indigo-600 "}>
                                         <Link to={item.path}>
                                             <a>
                                                 {item?.icon}
@@ -82,8 +96,8 @@ function Navbar() {
                 </div>
                 <div className="hidden md:inline-block">
                     <Link to={`/contact-me`}>
-                        <a
-                            className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow">
+                        <a onClick={() => handleClick("contact-me")}
+                           className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow">
                             CONTACT ME <FontAwesomeIcon className="pl-2" icon={faPhoneSquare}/>
                         </a>
                     </Link>
